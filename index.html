@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login - Pembayaran UMM</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center font-sans">
+
+  <div class="w-full max-w-md bg-white rounded-xl shadow p-6">
+    <h1 class="text-2xl font-semibold text-maroon mb-4 text-center">Pembayaran Kampus - Universitas Muhammadiyah Malang (UMM)</h1>
+
+    <label class="text-sm text-gray-600">Nama</label>
+    <input id="name" class="w-full border rounded p-2 mb-3" placeholder="Masukkan nama (mis: Wahyu Denta Fahrezi)" />
+
+    <label class="text-sm text-gray-600">NIM</label>
+    <input id="nim" class="w-full border rounded p-2 mb-4" placeholder="Masukkan NIM (mis: 20231037031103)" />
+
+    <div class="flex gap-3">
+      <button id="loginBtn" class="flex-1 bg-maroon text-white py-2 rounded hover:opacity-95">Masuk</button>
+      <a href="pembayaran.html" class="flex-1 text-center bg-gray-100 py-2 rounded hover:bg-gray-200">Demo</a>
+    </div>
+
+    <p class="text-xs text-gray-500 mt-3">Catatan: Login hanya menerima akun <strong>wahyu denta fahrezi</strong> / <strong>20231037031103</strong>.</p>
+  </div>
+
+<script>
+document.getElementById('loginBtn').addEventListener('click', () => {
+  const name = document.getElementById('name').value.trim().toLowerCase();
+  const nim = document.getElementById('nim').value.trim();
+  if (name === 'wahyu denta fahrezi' && nim === '20231037031103') {
+    localStorage.setItem('user_name', 'Wahyu Denta Fahrezi');
+    localStorage.setItem('user_nim', '20231037031103');
+    window.location.href = 'pembayaran.html';
+  } else {
+    alert('Nama atau NIM salah, silakan coba lagi.');
+  }
+});
+</script>
+</body>
+</html>

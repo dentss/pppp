@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Konfirmasi Pembayaran - UMM</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 min-h-screen font-sans">
+
+  <header class="bg-white shadow-sm">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+      <h1 class="text-md font-semibold text-maroon">Konfirmasi Pembayaran</h1>
+      <div class="text-right text-sm">
+        <div id="userNameTopC" class="font-semibold"></div>
+        <div id="userNimTopC" class="text-gray-500"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto p-6">
+    <div class="bg-white p-6 rounded-lg shadow">
+      <p class="text-sm text-gray-600 mb-2">Status: <span id="statusLabel" class="font-semibold">Belum Dibayar</span></p>
+      <p><strong>Kode Bayar:</strong> <span id="kodeBayar">-</span></p>
+      <p><strong>Item:</strong> <span id="itemLabel">-</span></p>
+      <p><strong>Semester:</strong> <span id="itemSem">-</span></p>
+      <p><strong>Total Tagihan:</strong> <span id="itemTotal">-</span></p>
+
+      <div class="mt-4">
+        <label class="block font-medium mb-1">Pilih Bank / Metode</label>
+        <select id="bankSelect" class="w-full border p-2 rounded mb-3">
+          <option value="">-- Pilih --</option>
+          <option value="BRI">BRI</option>
+          <option value="BNI">BNI</option>
+          <option value="Mandiri">Mandiri</option>
+          <option value="BCA">BCA</option>
+          <option value="DANA">DANA</option>
+        </select>
+
+        <label class="block font-medium mb-1">Masukkan Nominal (Rp)</label>
+        <input id="inputNominal" type="number" class="w-full border p-2 rounded mb-3" placeholder="Contoh: 2900000" />
+
+        <button id="confirmBtn" class="bg-maroon text-white px-4 py-2 rounded btn">Konfirmasi</button>
+        <a href="pembayaran.html" class="ml-3 text-sm text-gray-600 underline">Kembali</a>
+      </div>
+
+      <div id="afterNote" class="mt-4 hidden bg-yellow-50 p-3 rounded text-sm text-gray-700">
+        Permintaan konfirmasi terkirim. Tunggu verifikasi dari admin.
+      </div>
+    </div>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>

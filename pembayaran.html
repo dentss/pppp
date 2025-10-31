@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pembayaran - UMM</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 min-h-screen font-sans">
+
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-lg font-semibold text-maroon">Pembayaran Kampus - Universitas Muhammadiyah Malang (UMM)</h1>
+      <div class="text-right text-sm">
+        <div id="userNameTop" class="font-semibold"></div>
+        <div id="userNimTop" class="text-gray-500"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6">
+    <div class="bg-white p-4 rounded-lg shadow mb-6">
+      <h2 class="text-md font-semibold text-gray-700">Daftar Pembayaran</h2>
+      <p class="text-sm text-gray-500">Pilih semester yang ingin dibayar, lalu klik <strong>Bayar</strong>.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+      <div class="bg-maroon text-white rounded-lg p-6">
+        <h3 class="text-xl font-semibold">Pilih Item Pembayaran</h3>
+        <p class="text-sm mt-2">Menu ini digunakan untuk memilih item pembayaran</p>
+      </div>
+      <div class="bg-red-300 text-white rounded-lg p-6">
+        <h3 class="text-xl font-semibold">Riwayat Nomor Pembayaran</h3>
+        <p class="text-sm mt-2">Lihat riwayat pembayaran yang telah diajukan</p>
+      </div>
+    </div>
+
+    <section class="bg-white p-4 rounded-lg shadow mb-6">
+      <h3 class="font-semibold text-gray-700 mb-3">SPP (Semester 1–14)</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full table-auto table text-sm">
+          <thead class="bg-gray-50 text-gray-600">
+            <tr>
+              <th class="p-3">Semester</th>
+              <th class="p-3">Nominal</th>
+              <th class="p-3">Kekurangan</th>
+              <th class="p-3">Status</th>
+              <th class="p-3">Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="sppTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="bg-white p-4 rounded-lg shadow mb-6">
+      <h3 class="font-semibold text-gray-700 mb-3">DPP (Semester 1–14)</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full table-auto table text-sm">
+          <thead class="bg-gray-50 text-gray-600">
+            <tr>
+              <th class="p-3">Semester</th>
+              <th class="p-3">Nominal</th>
+              <th class="p-3">Kekurangan</th>
+              <th class="p-3">Status</th>
+              <th class="p-3">Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="dppTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="flex justify-between">
+      <a href="admin.html" class="text-sm text-blue-600 hover:underline">Masuk ke halaman admin</a>
+      <button id="logoutBtn" class="text-sm bg-gray-100 px-3 py-2 rounded">Logout</button>
+    </div>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>

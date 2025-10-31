@@ -1,0 +1,6 @@
+.text-maroon { color: #7b1224; }
+.bg-maroon { background-color: #7b1224; }
+.btn { transition: all .15s ease; }
+.table th, .table td { border: 1px solid #e6e6e6; }
+.badge-paid { color: #166534; background: #dcfce7; padding: 4px 8px; border-radius: 6px; }
+.badge-pending { color: #92400e; background: #fff7ed; padding: 4px 8px; border-radius: 6px; }
